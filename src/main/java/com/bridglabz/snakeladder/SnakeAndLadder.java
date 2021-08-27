@@ -6,8 +6,10 @@ public class SnakeAndLadder {
         int IS_SNAKE = 1;
         int IS_LADDER = 2;
         int WINNING_POSITION = 100;
+        int diceCount =0;
 
         while (position < WINNING_POSITION) {
+            diceCount++;
 
             int diceNumber = (int) (Math.floor(Math.random() * 10) % 6 + 1);
 
@@ -32,6 +34,7 @@ public class SnakeAndLadder {
                 System.out.println("No Play for the Player");
             }
             System.out.println("dice: "+diceNumber);
+            System.out.println("Dice count :"+diceCount);
             System.out.println("Position " + position);
         }
     }
