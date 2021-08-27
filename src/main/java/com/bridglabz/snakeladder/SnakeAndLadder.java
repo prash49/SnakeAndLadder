@@ -15,16 +15,23 @@ public class SnakeAndLadder {
 
             if (option == IS_SNAKE) {
                 System.out.println("Snake for the Player");
-                position -= diceNumber;
-                if (position < 0) {
-                    position = 0;
+//                position -= diceNumber;
+//                if (position < 0) {
+//                    position = 0;
+//                }
+                if ( position - diceNumber > 0){
+                    position -= diceNumber;
                 }
             } else if (option == IS_LADDER) {
                 System.out.println("ladder for the player");
                 position += diceNumber;
+                if(position > 100){
+                    position -= diceNumber;
+                }
             } else {
                 System.out.println("No Play for the Player");
             }
+            System.out.println("dice: "+diceNumber);
             System.out.println("Position " + position);
         }
     }
